@@ -373,7 +373,7 @@ module.exports = class Reader extends Component {
       paddingTop: '80%',
       border: '5px solid #fff',
       borderRadius: '50%',
-      boxShadow: '0 0 0 500px rgba(0, 0, 0, 0.5)'
+      boxShadow: '0 0 0 500px rgba(0, 0, 0, 0.8)'
     };
     const innerBorderStyle = {
       position: 'absolute',
@@ -381,7 +381,7 @@ module.exports = class Reader extends Component {
       top: 0,
       right: 0,
       bottom: 0,
-      border: '8px solid rgba(0, 0, 0, 0.5',
+      border: '8px solid rgba(0, 0, 0, 0.8)',
       borderRadius: '50%'
     };
 
@@ -392,8 +392,8 @@ module.exports = class Reader extends Component {
             (!legacyMode && showViewFinder)
               ? (
                 <div style={viewFinderStyle}>
-                  <div style={innerCirclrStyle}>
-                    <div style={innerBorderStyle}/>
+                  <div className="qr-scan-circle" style={innerCirclrStyle}>
+                    <div className="qr-inner-border" style={innerBorderStyle}/>
                   </div>
                 </div>
               )
