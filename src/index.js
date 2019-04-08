@@ -335,7 +335,7 @@ module.exports = class Reader extends Component {
       position: 'relative',
       width: '100%',
       height: '100%',
-      overflow: 'hidden',
+      overflow: 'hidden'
     };
     const hiddenStyle = { display: 'none' };
     const previewStyle = {
@@ -345,16 +345,16 @@ module.exports = class Reader extends Component {
       width: '100%',
       height: '100%',
       display: 'block',
-      overflow: 'hidden',
+      overflow: 'hidden'
     };
     const videoPreviewStyle = {
       ...previewStyle,
       objectFit: 'cover',
-      transform: this.state.mirrorVideo ? 'scaleX(-1)' : undefined,
+      transform: this.state.mirrorVideo ? 'scaleX(-1)' : undefined
     };
     const imgPreviewStyle = {
       ...previewStyle,
-      objectFit: 'scale-down',
+      objectFit: 'scale-down'
     };
     const viewFinderStyle = {
       position: 'absolute',
@@ -365,14 +365,24 @@ module.exports = class Reader extends Component {
       height: '100%',
       display: 'flex',
       alignItems: 'center',
-      justifyContent: 'center',
+      justifyContent: 'center'
     };
     const innerCirclrStyle = {
+      position: 'relative',
       width: '80%',
       paddingTop: '80%',
-      border: '2px solid #fff',
+      border: '5px solid #fff',
       borderRadius: '50%',
       boxShadow: '0 0 0 500px rgba(0, 0, 0, 0.5)'
+    };
+    const innerBorderStyle = {
+      position: 'absolute',
+      left: 0,
+      top: 0,
+      right: 0,
+      bottom: 0,
+      border: '8px solid rgba(0, 0, 0, 0.5',
+      borderRadius: '50%'
     };
 
     return (
@@ -382,7 +392,9 @@ module.exports = class Reader extends Component {
             (!legacyMode && showViewFinder)
               ? (
                 <div style={viewFinderStyle}>
-                  <div style={innerCirclrStyle}/>
+                  <div style={innerCirclrStyle}>
+                    <div style={innerBorderStyle}/>
+                  </div>
                 </div>
               )
               : null
