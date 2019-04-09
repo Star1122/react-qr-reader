@@ -11,7 +11,7 @@ class Wrapper extends Component {
     const { selectFacingMode, selectDelay, legacyMode, onAndOff } = this.props;
 
     return (
-      <div style={{ width: "400px", margin: "auto" }}>
+      <div style={{ width: "400px", height: "600px", margin: "auto" }}>
         {onAndOff && (
           <button onClick={() => this.setState({ on: !this.state.on })}>
             {this.state.on ? "Turn off" : "Turn on"}
@@ -48,6 +48,7 @@ class Wrapper extends Component {
             maxImageSize={1000}
             delay={this.state.delay}
             className="reader-container"
+            style={{ width: '100%', height: '100%' }}
           />
         )}
         {legacyMode && (
