@@ -367,7 +367,7 @@ module.exports = class Reader extends Component {
       alignItems: 'center',
       justifyContent: 'center'
     };
-    const innerCirclrStyle = {
+    const innerCircleStyle = {
       position: 'relative',
       width: '80%',
       paddingTop: '80%',
@@ -391,8 +391,8 @@ module.exports = class Reader extends Component {
           {
             (!legacyMode && showViewFinder)
               ? (
-                <div style={viewFinderStyle}>
-                  <div className="qr-scan-circle" style={innerCirclrStyle}>
+                <div className="qr-scan-wrapper" style={viewFinderStyle}>
+                  <div className="qr-scan-circle" style={innerCircleStyle}>
                     <div className="qr-inner-border" style={innerBorderStyle}/>
                   </div>
                 </div>
